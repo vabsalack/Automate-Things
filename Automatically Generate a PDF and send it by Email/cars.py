@@ -9,7 +9,7 @@ def load_data(filename):
     """Loads the contents of filename as a JSON file."""
     with open(filename) as json_file:
         new_data = json.load(json_file)
-        data = sorted(new_data, key=lambda i: i['total_sales'])
+        data = sorted(new_data, key=lambda i: i['total_sales'], reverse=True)
     return data
 
 
